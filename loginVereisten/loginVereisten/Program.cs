@@ -21,6 +21,8 @@
                 {
                     Console.WriteLine($"Welkom {usernameInput}");
                 }
+                tries++;
+                Console.WriteLine($"Foutieve login.\n{3 - tries} pogingen over.");
             }
 
 
