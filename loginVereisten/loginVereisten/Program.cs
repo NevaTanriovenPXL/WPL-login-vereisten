@@ -4,15 +4,28 @@
     {
         static void Main(string[] args)
         {
-            string username;
-            string wachtwoord;
+            string usernameInput;
+            string passwordInput;
+
+            const string user = "Admin", password = "P@sswoord123";
+            int tries = 0;
+            while (tries < 3)
+            {
+                Console.Write("Gebruikersnaam: ");
+                usernameInput = Console.ReadLine();
+
+                Console.Write("Wachtwoord: ");
+                passwordInput = Console.ReadLine();
+
+                if (usernameInput == user && passwordInput == password)
+                {
+                    Console.WriteLine($"Welkom {usernameInput}");
+                }
+            }
 
 
-            Console.Write("Gebruikersnaam: ");
-            username = Console.ReadLine();
 
-            Console.Write("Wachtwoord: ");
-            wachtwoord = Console.ReadLine();
+
         }
     }
 }
